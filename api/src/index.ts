@@ -1,3 +1,4 @@
+//Donde se inicializa la app
 import app from "./app"
 import './db'
 
