@@ -14,7 +14,8 @@ const videoSchema = new Schema({
     url:{
         type:String,
         required: true,
-        trim:true
+        trim:true,
+        unique:true
     }
 
 },{
