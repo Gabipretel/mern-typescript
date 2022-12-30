@@ -1,2 +1,3 @@
-# mern-typescript
+# MERN-Typescript
 Proyecto de VIDEOS CON EL STACK MERN (MONGO,EXPRESS,REACT,NODE)
+
