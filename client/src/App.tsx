@@ -1,7 +1,7 @@
 import {Routes,Route} from 'react-router-dom'
-import VideoList from './components/VideoList'
-import NavBar from './components/NavBar'
-import VideoForm from './components/VideoForm'
+import VideoList from './components/Videos/VideoList'
+import NavBar from './components/NavBar/NavBar'
+import VideoForm from './components/Videos/VideoForm'
 function App() {
   return (
     <>

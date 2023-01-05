@@ -1,15 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import Video from './Video'
+import {Video} from './Video'
+import Videos from './Videos'
 
-export interface Video{
-  createdAt: string,
-  description: string,   
-  title: string,
-  updatedAt: string,
-  url: string,
-  _id: string,
-}
 
 
 const VideoList = () => {
@@ -32,7 +25,7 @@ const VideoList = () => {
           Lista de Videos:
         {
           videos && videos.map(video=>
-            <Video
+            <Videos
             key={video._id} 
             title={video.title}
             description={video.description} 
