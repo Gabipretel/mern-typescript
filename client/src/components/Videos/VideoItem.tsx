@@ -5,7 +5,7 @@ interface Props{
   video:Video
 }
 
-const Videos = ({video}: Props) => {
+const VideoItem = ({video}: Props) => {
   return (
     <div>
         <h1>Titulo</h1>
@@ -18,4 +18,4 @@ const Videos = ({video}: Props) => {
   )
 }
 
-export default Videos
+export default VideoItem
