@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <div className="container">
+      <div className="container p-4">
         <Routes>
           {/* <Route path='/' element={<NavBar/>}/> */}
           <Route path="/videolist" element={<VideoList />} />
