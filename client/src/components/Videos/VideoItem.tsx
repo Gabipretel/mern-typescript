@@ -14,6 +14,7 @@ const VideoItem = ({video}: Props) => {
         <h3>{video.description}</h3>
         <h2>Link al video:</h2>
         <h3>{video.url}</h3>
+        <h3>{video._id}</h3>
     </div>
   )
 }
