@@ -19,11 +19,11 @@ const VideoList = () => {
   },[])
 
   return (
-    <div>
-          Lista de Videos:
+    <div className='row'>
+        
         {
          videos && videos.map((video)=>{
-            return <VideoItem video={video}/>
+            return <VideoItem video={video} key={video._id}/>
          })
         }
     </div>
