@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Video } from "./Video";
+import * as videoService from './VideoService'
 
 const VideoForm = () => {
   type InputChange = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
@@ -13,13 +14,20 @@ const VideoForm = () => {
   const handleInputChange = (e: InputChange) =>
     setVideo({ ...video, [e.target.name]: e.target.value });
 
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>)=>{
+    e.preventDefault()
+    const res= await videoService.createVideo(video)
+    console.log(res);
+
+  }
+
   return (
     <div className="row">
       <div className="col-md-4 offset-md-4">
         <div className="card my-auto">
           <div className="card-body">
             <h3>NuevoVideo</h3>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <input
                   type="text"
@@ -28,7 +36,7 @@ const VideoForm = () => {
                   className="form-control"
                   autoFocus
                   onChange={handleInputChange}
-                  // value={video.title}
+                  //  value={video.title}
                 />
               </div>
 
@@ -50,7 +58,7 @@ const VideoForm = () => {
                   className="form-control"
                   placeholder="Escribe una descripción "
                   onChange={handleInputChange}
-                  // value={video.description}
+                //  value={video.description}
                 ></textarea>
               </div>
 
@@ -59,6 +67,7 @@ const VideoForm = () => {
               ) : (
                 <button className="btn btn-primary">Create</button>
               )} */}
+              <button type="button" className="btn btn-outline-success">Crear Video</button>
             </form>
           </div>
         </div>
