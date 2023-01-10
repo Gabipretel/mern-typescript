@@ -1,22 +1,25 @@
-import React from 'react'
-import {Video} from './Video'
-//Ver como pasar una interfaz a una funcion..
-interface Props{
-  video:Video
+import React from "react";
+import { Video } from "./Video";
+import ReactPlayer from "react-player";
+interface Props {
+  video: Video;
 }
 
-const VideoItem = ({video}: Props) => {
+const VideoItem = ({ video }: Props) => {
   return (
-    <div>
-        <h1>Titulo</h1>
-        <h2>{video.title}</h2>
-        <h2>Descripción</h2>
-        <h3>{video.description}</h3>
-        <h2>Link al video:</h2>
-        <h3>{video.url}</h3>
-        <h3>{video._id}</h3>
+    <div className="col-md-4">
+      <div className="card card-body">
+        <div className="d-flex justify-content-between">
+          <h3>{video.title}</h3>
+          <span className="text-danger">X</span>
+        </div>
+        <p>{video.description}</p>
+        <div className=" d-flex justify-content-center embed-responsive embed-responsive-16by9">
+          <ReactPlayer url={video.url} />
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default VideoItem
+export default VideoItem;
