@@ -10,7 +10,17 @@ const VideoList = () => {
 
   const videoLoad = async ()=>{
     const videos= await videoService.getVideos()
-    setVideos(videos.data)
+    
+    const formatedVideos = videos.data.map(video=>{
+      return {
+        ...video,
+        createdAt: video.createdAt? new Date(video.createdAt): new Date(),
+        updatedAt: video.updatedAt? new Date(video.updatedAt): new Date()
+      }
+    })
+    .sort((a,b)=> b.createdAt.getTime()-a.createdAt.getTime())
+
+    setVideos(formatedVideos)
     // console.log(videos.data);
   }
   
