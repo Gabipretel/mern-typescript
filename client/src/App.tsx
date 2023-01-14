@@ -13,6 +13,7 @@ function App() {
           {/* <Route path='/' element={<NavBar/>}/> */}
           <Route path="/" element={<VideoList />} />
           <Route path="/newvideo" element={<VideoForm />} />
+          <Route path="/update/:id" element={<VideoForm />} />
         </Routes>
         <ToastContainer/>
       </div>

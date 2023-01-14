@@ -3,6 +3,6 @@ export interface Video{
     title: string,
     url: string,
     _id?: string,
-    createdAt?: string,
-    updatedAt?: string,
+    createdAt?: string | Date
+    updatedAt?: string | Date
   }
