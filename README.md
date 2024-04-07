@@ -1,3 +1,2 @@
 # MERN-Typescript
 Proyecto de VIDEOS CON EL STACK MERN (MONGO,EXPRESS,REACT,NODE)
-Averiguar porque el hook rompe la app...
